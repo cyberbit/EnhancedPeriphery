@@ -59,7 +59,7 @@ public class EnhancedInventoryMethods implements GenericPeripheral {
 
     @Nullable
     @LuaFunction(mainThread = true)
-    public Map<Integer, Map<String, Object>> listWithCapabilities(IItemHandler inventory) throws LuaException {
+    public Map<Integer, Map<String, Object>> listWithCapabilities(IItemHandler inventory) {
         Map<Integer, Map<String, Object>> result = new HashMap<>();
 
         var size = inventory.getSlots();
@@ -90,9 +90,7 @@ public class EnhancedInventoryMethods implements GenericPeripheral {
         if (inventoryCap.isPresent()) {
             var itemInventory = inventoryCap.get();
 
-            var list = listWithCapabilities(itemInventory);
-
-            return list;
+            return listWithCapabilities(itemInventory);
         }
 
         return null;
