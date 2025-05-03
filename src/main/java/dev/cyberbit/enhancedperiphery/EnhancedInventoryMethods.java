@@ -14,9 +14,6 @@ import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Inventory methods for Forge's {@link IItemHandler}.
- */
 public class EnhancedInventoryMethods implements GenericPeripheral {
     @Override
     public String id() {
@@ -77,12 +74,6 @@ public class EnhancedInventoryMethods implements GenericPeripheral {
 
         return result;
     }
-
-//    @Nullable
-//    @LuaFunction(mainThread = true)
-//    public Map<Integer, Map<String, ?>> getItemInventory(IItemHandler inventory, int slot) throws LuaException {
-//        return getItemInventory(inventory, slot, false);
-//    }
 
     @Nullable
     @LuaFunction(mainThread = true)
